@@ -3,13 +3,14 @@
 -----------------------
 |  模块   | 可用组件  |
 |  :----  | :----  |
-| 服务注册与发现  | Eureka、Zookeeper、Consul |
-| 服务调用负载均衡  | Ribbon、Feign |
-| 服务容错保护  | Hystrix |
-| 断路器监控  | HystrixDashboard |
+| 注册中心  | Eureka、Consul、Nacos、Zookeeper |
+| 配置中心  | SpringCloudConfig、Consul、Nacos |
 | API网关  | Zuul、SpringCloudGateWay |
-| 外部集中化配置管理  | 单元格 |
-| 消息总线  | SpringCloudBus |
+| 负载均衡  | Ribbon、OpenFeign |
+| 熔断与限流  | Hystrix、Sentinel |
+| 安全保护  | SpringCloudSecurity |
+| 监控中心  | SpringBootAdmin |
+| 分布式事务解决  | Seata |
 -------------------------
 ### SpringCloud 和 SpringBoot 版本
 -----------------------
