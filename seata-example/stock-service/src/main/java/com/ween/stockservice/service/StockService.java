@@ -1,11 +1,10 @@
 package com.ween.stockservice.service;
 
-import com.ween.stockservice.entity.Stock;
-import com.ween.stockservice.repository.StockRepository;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import javax.annotation.Resource;
+import com.ween.stockservice.entity.Stock;
+import org.springframework.stereotype.Service;
+import com.ween.stockservice.repository.StockRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class StockService {
@@ -20,6 +19,10 @@ public class StockService {
 		}
 		Stock stock=repository.findByCode(code);
 		stock.setCount(stock.getCount()-count);
+		repository.saveAndFlush(stock);
+	}
+
+	public void save(Stock stock){
 		repository.save(stock);
 	}
 }

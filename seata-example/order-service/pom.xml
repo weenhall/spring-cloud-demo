@@ -10,6 +10,13 @@
     <artifactId>order-service</artifactId>
     <name>order-service</name>
     <description>order-service</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>

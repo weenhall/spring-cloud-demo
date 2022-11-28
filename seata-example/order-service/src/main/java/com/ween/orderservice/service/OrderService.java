@@ -3,6 +3,7 @@ package com.ween.orderservice.service;
 import com.ween.orderservice.api.StockFeignClient;
 import com.ween.orderservice.entity.Order;
 import com.ween.orderservice.repository.OrderRepository;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +18,8 @@ public class OrderService {
 	@Resource
 	private StockFeignClient stockFeignClient;
 
-	@Transactional
+	@GlobalTransactional
+	@Transactional(rollbackFor = Exception.class)
 	public void placeOrder(String userId,String code,Integer count){
 		BigDecimal price=new BigDecimal(count).multiply(BigDecimal.TEN);
 		Order order=new Order();
