@@ -47,5 +47,6 @@
         <module>api-gateway</module>
         <module>nacos-example</module>
         <module>seata-example</module>
+        <module>sentinel-example</module>
     </modules>
 </project>
