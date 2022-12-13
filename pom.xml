@@ -48,5 +48,6 @@
         <module>nacos-example</module>
         <module>seata-example</module>
         <module>sentinel-example</module>
+        <module>sleuth-zipkin</module>
     </modules>
 </project>
